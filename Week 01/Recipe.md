@@ -8,7 +8,7 @@ Ingredients #H2 **bold text**
 
 - 2 Eggs
 - 1 cup of Milk
-- Tsp of vanilla
+- Tsp of vanillagit
 - Cinnamon (desired amount)
 - 1 tsp of brown sugar
 - Bread (sliced can be any kind but perferably a slice of bread that's thick)
