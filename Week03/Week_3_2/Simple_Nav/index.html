@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-g"/>
+    <meta name="viewport" content="width=device-width, inital-scale=1"/>
+    <title>Simple Navbar</title>
+
+    <style type="text/css">
+        /* the star means it is changing everything  */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family:'Helvetica', Arial, sans-serif;
+        }
+
+        ul{
+            /* remove all bullet points */
+            list-style-type: none;
+            overflow: hidden;
+            background-color: #999;
+            /* make parent elemtns font size 0 because we are using inline block to stack our LI,
+             inline block stack each element like a letter in a word or a pargraph,
+              making the font size zero ensures no funky extra margins */
+            
+            font-size: 0;
+
+        }
+
+        li{
+            /* allows for giving a margin around the elements */
+            display: inline-block;
+            /* equivalent to 16 px */
+            font-size: 1rem;
+        }
+
+        li a{
+            /* make sure the link's clickable area is larger than just the text */
+            display: block;
+            text-align: center;
+            width: 100px;
+            padding: 10px;
+            /* remove underline on the link text */
+            text-decoration: none;
+            /* change the link color */
+            /* anytime we say color is referring to the color of the font */
+            color: #333;
+
+        }
+
+        li a.active{
+            background-color: #888;
+        }
+
+        li a:hover{
+            background-color: #111;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="active">Link1</a></li>
+            <li><a href="#">Link2 </a></li>
+            <li><a href="#">Link3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

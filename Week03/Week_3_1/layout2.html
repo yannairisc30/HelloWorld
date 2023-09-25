@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html land ="en"></html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Layout 2: pixel based, percentaged based and clear-fix class</title>
+    <style type="text/css">
+    body{
+        /* means give it 0 all around */
+        margin: 0; 
+    }
+    /* transparent blue BG and min height so we can keep track of our divs and semantic markup elment
+    wihtout having to add context */
+    div,header,footer, section, aside, article,
+     main{
+        min-height: 100px;
+        /* RGBA red green blue Alpha */
+        /*0-255 */
+        background-color: rgba(0,100,255,0.2);
+    }
+
+    main{
+        width: 960px;
+        /* makes it centered */
+        margin: 0 auto;
+    }
+
+    /* resuable class that adds a block of empty content with zero height that will 
+    clear out both sides to avoid our wrapping issues. Use this class on the container/wrapper element */
+
+    .clearfix::after{
+        display: block;
+        clear: both;
+        /* to ensure cross browser compatability  */
+        height: 0;
+        font-size: 0;
+        content:"";
+        /* lone last fallback */
+        visibility: hidden;
+    }
+
+    /* descendant selector for more specificty */
+    article.col-pixels section{
+        /* 960px-6*10px margins/3 */
+        width: 300px;
+        margin: 0 10px;
+        float: left;
+
+    }
+
+    article.col-fluid section{
+        width: 20%;
+        margin: 2.5%;
+        float: left;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- In this example header and footer are not included with our wrapper -->
+    <heaer>
+        A header element with width 100%. We will cover menus in the next example
+    </heaer>
+
+    <main>
+        <h1>Article 1: Pixel Based </h1>
+        <article class="col-pixels clearfix">
+            <section>Section 1</section>
+            <section>Section 2</section>
+            <section>Section 3</section>
+        </article>
+     </main>
+     
+    <h1>Article 2: Percent Based</h1>
+    <!-- fluid layout using % -->
+    <article class="col-fluid clear-fix">
+        <h3>Article with 4 vertical sections/colums</h3>
+        <p>note that this article is outside of our main element - which has a set picel width</p>
+        <!-- start stacking our sections after our headings and paragrpahs that display block aka 100% by default -->
+        <section><h3> Section1</h3> </section>
+        <section><h3>SEction 2</h3></section>
+        <section><h3>Section 4</h3></section>
+    </article>
+    <footer> Some footer text </footer>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-g"/>
+    <meta name="viewport" content="width=device-width, inital-scale=1"/>
+    <title>Positioning </title>
+
+    <style type="text/css">
+        /* the star means it is changing everything  */
+
+        body{
+            font-family:'Helvetica', Arial, sans-serif;
+            margin: 0;
+        }
+
+        ul{
+            /* remove all bullet points */
+            list-style-type: none;
+            overflow: hidden;
+            background-color: #999;
+            /* make parent elemtns font size 0 because we are using inline block to stack our LI,
+             inline block stack each element like a letter in a word or a pargraph,
+              making the font size zero ensures no funky extra margins */
+            
+            font-size: 0;
+
+        }
+
+        li{
+            /* allows for giving a margin around the elements */
+            display: inline-block;
+            /* equivalent to 16 px */
+            font-size: 1rem;
+        }
+
+        li a{
+            /* make sure the link's clickable area is larger than just the text */
+            display: block;
+            text-align: center;
+            width: 100px;
+            padding: 10px;
+            /* remove underline on the link text */
+            text-decoration: none;
+            /* change the link color */
+            /* anytime we say color is referring to the color of the font */
+            color: #333;
+
+        }
+
+        li a.active{
+            background-color: #888;
+        }
+
+        li a:hover{
+            background-color: #111;
+            color: white;
+        }
+
+        /* Positioning */
+        nav.fixed-nav{
+            position:fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #abs{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            overflow:hidden;
+            position: absolute;
+            top: 0;
+            left: 50%;
+        }
+
+        #rel{
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+
+            position: relative;
+            top: -100px;
+            right: -100px;
+        }
+
+        #rel-parent{
+            width: 500px;
+            height: 500px;
+
+        }
+
+        #abs-child{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="fixed-nav">
+        <ul>
+            <li><a href="#" class="active">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>She has a really long paragraph here allalallalalalaalallallajffwjjoijvnfknenei
+            aksfnafnlerner
+            aenrflierf
+        </p>
+        <p> I love jesussssss. Thank you jesuss</p>
+        <div id="abs">
+            Absolute positioing with no parent positioning defined!
+        </div>
+        <div id="rel">
+            Relative positioned div with no parent positioning defined!
+        </div>
+        <div id="rel-parent">
+            <div id="abs-child">
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

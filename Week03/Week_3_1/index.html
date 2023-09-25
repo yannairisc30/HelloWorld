@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html land ="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Layout 1</title>
+
+    <style type ="text/css">
+        body{
+            /* means give it 0 all around */
+            margin: 0; 
+        }
+    /* transparent blue BG and min jeight so we can keep track of our divs and semantic markup elment
+    wihtout having to add context */
+    div,header,footer, section, aside, article,
+     main{
+        min-height: 100px;
+        /* RGBA red green blue Alpha */
+        /*0-255 */
+        background-color: rgba(0,100,255,0.2);
+    }
+
+    div.wrapper{
+        width: 900px;
+        /* use margin 0 auto to center our wrapper div within our browser window */
+        margin: 0 auto;
+        /* 1 rem == 16px */
+        /* margin-top: 1 rem; */
+        /* add a little bit of padding so we can see how child elements */
+        padding: 30px;
+        /* shorthand for border dimension, styles, color */
+        border: 2px solid red;
+    }
+
+    article{
+        width: 600px;
+        float: left; 
+    }
+
+    aside{
+        width: 300px;
+        float: left;
+        height: 400px;
+        background-color: rgba(255 0, 0, 0.1);
+    }
+
+    .clearfix{
+        height: 0;
+        clear: both;
+    }
+    </style>
+</head>
+<body>
+    <!-- need to define it with css the div part and that would apply to all divs -->
+    <div class="wrapper">
+        <header>A header element with width of 100%, We will cover menu layouts in another example!</header>
+        <main>
+         <h1> Main Content Section - heading elements display block</h1>   
+         <article>
+            <h2>Article with 3 sections</h2>
+            <section>Section 1</section>
+            <section>Section 2</section>
+            <section>Section 3</section>
+         </article>
+         <aside>
+            <h2>Sidebar</h2>
+         </aside>
+         <!-- add an invisble element to clear both so that our wrapper div actually wraps around our content -->
+         <br class="clearfix">
+        </main>
+        <footer>
+            <h3>Some footer text</h3>
+        </footer>
+    </div>
+</body>
+</html>

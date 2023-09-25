@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Recipes</title>
+
+    <style type="text/css">
+        main {
+            background-color: bisque;
+        }
+        .wrapper {
+            max-width: 1170px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgb(226, 196, 171);
+        }
+        .Image {
+            max-width: 100%;
+            height: auto;
+        }
+        .aside {
+            width: 200px;
+            float: right;
+            height: 100px;
+            background-color: rgba(255, 0, 0, 0.1); 
+            /* clear: right; */
+        }
+        .clearfix{
+        height: 0;
+        clear: both;
+    }
+
+    p.subheading{
+        font-size: 25px;
+        font-weight: bold;
+
+    }
+    p.a{
+        font-size:25px ;
+        font-weight:bold;
+    }
+
+    *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family:'Helvetica', Arial, sans-serif;
+        }
+
+        ul{
+            list-style-type: none;
+            overflow: hidden;
+            background-color: #fbd4ae;
+            font-size: 0;
+        }
+
+        li{
+            display: inline-block;
+            font-size: 20px;
+            /* float:right; */
+        }
+
+        li a{
+            display: block;
+            text-align: center;
+            width: 120px;
+            padding: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        li a.active{
+            background-color: #8F9E8B;
+        }
+
+        li a:hover{
+            background-color: #e1cab2;
+            color: white;
+        }
+    </style>
+    </head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./Week_3_Hw/Recipes/index.html">Recipes</a></li>
+            <li><a href = "../Week_3_Hw/About Us/index.html">About Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class ="wrapper">
+            <h1>French Toast!</h1>
+        <div class ="Image">
+            <img src="https://www.kulicksfrenchtoastrecipes.com/wp-content/uploads/2022/06/French-toast-recipe-500x375.jpg">
+        </div>
+        <p class="subheading"> Background Story </p>
+        <p>French Toast origin is beleived to come from the Roman Empire it first 
+            was created just by soaking the bread <br>
+            into the milk and eggs mixture. Then frying it in a pan with butter. <br> It came to America a few years. </p>
+        <p class ="a">Instructions</p>
+            <ol>
+                <li>Obtain a large bowl possibly one that is deep</li>
+                <li>Crack 2 eggs into the bowl</li>
+                <li>Pour the cup of milk</li>
+                <li>Whisk or mix all the ingredients in the bowl </li>
+                <li>pour the vanilla into the bowl after whisking</li>
+                <li>pour the brown sugar</li>
+                <li>pour desired amount of cinnamon</li>
+                <li>whisk all the inggredients together</li>
+                <li>Grab desired bread and put in it the mixture</li>
+                <li>flip the bread in the mixture</li>
+                <li>put butter in a skillet</li>
+                <li>add the bread to the skillet let it cook for 2/3 minutes on each side</li>
+                <li>Serve with other ingredients(like eggs, bacon, fruits, etc..) or just enjoy the french toast!</li>
+            </ol>
+        <aside>
+            <h2>Ingredients</h2>
+            <form>
+                <input type="checkbox" name = "Ingredients" value="2 Eggs">
+                <input type="checkbox" name = "Ingredients" value="1 cup of Milk">
+                <input type="checkbox" name = "Ingredients" value="1 Tsp vanilla extract ">
+                <input type="checkbox" name = "Ingredients" value="Powder Cinnamon (desired amount)">
+                <input type="checkbox" name = "Ingredients" value="2 Tsp of brown sugar">
+                <input type="checkbox" name = "Ingredients" value="Bread (can be any kind of bread perferably a kind that is thick)">
+                <input type="checkbox" name = "Ingredients" value="Butter">
+            </form>
+         </aside>
+        </div>
+        <br class ="clearfix">
+    </main>
+</body>
+</html>
