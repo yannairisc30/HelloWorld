@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-g"/>
+    <!-- Ensures proper responsie behavior -->
+    <meta name="viewport" content="width=device-width, inital-scale=1"/>
+    <title>Media Queries (and a little flexbox)</title>
+    <style type="text/css">
+        /* Desktop first, apply our default styles for desktop and then ovveride for smaller screens */
+
+        body{
+            margin:0;
+            padding:0;
+            /* read left to right hits the one that evalutes to true as in the one your laptop has downloaded */
+            font-family:Helvetica,Arial,sans-serif;
+            background-color: red;
+        }
+
+        h1{
+            margin:0;
+        }
+
+        header.header-flex{
+            display: flex;
+            /* makes everything stack in a row by default it just takes as much space as it needs to */
+            flex-direction: row;
+            /* if there was 3 items they will be spaced evenly  */
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-nav ul{
+            list-style: none;
+            display: flex;
+            padding:0;
+        }
+
+        .main-nav li{
+            text-align: center;
+        }
+
+        .main_nav a{
+            display:block;
+            width: 3 rem;
+        }
+
+        .flex-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      .space-around{
+        justify-content: space-around;
+        background-color: rgba(0, 100, 255, 0.5);
+      }
+
+      .space-between{
+        justify-content: space-between;
+        background-color: rgba(0, 255, 255, 0.5);
+      }
+
+      .thumb{
+        height: 10rem;
+        width: 23%;
+        background-color: blue;
+        border: 2px;
+
+      }
+
+      /* Tablet Screen Sizes */
+      @media only screen and (min-width: 768px) and (max-width: 1024px){
+        body{
+            background-color: green;
+        }
+
+        /* make our thumbnails stack 2 wide on tablet */
+        .thumb{
+            width: 48%;
+            /* 0 for false 1 for true*/
+            flex-grow: 0;
+            flex-shrink: 1;
+
+        }
+
+        .flex-container{
+            max-width: 1024px;
+            flex-wrap: wrap;
+        }
+
+      }
+
+      /* mobile screen sizes */
+      @media only screen and (max-width: 767px){
+        body{
+            background-color: yellow;
+        }
+
+        .flex-container{
+            width:100%;
+            padding: 0;
+            flex-direction: column;
+        }
+      }
+    </style>
+
+<body>
+    <header classs="header-flex">
+        <!-- Logo on the left -->
+        <h1 class="Logo">Logo</h1>
+        <!-- Nav on the right -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 1</a></li> 
+                <li><a href="#">Link 1</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Flex container with justify content space between: 4 wide on desktop, 2 on tablet, 1 on mobile -->
+    <div class="flex-container-space-between">
+        <div class="thumb"></div>
+        <div class="thumb"></div>
+        <div class="thumb"></div>
+        <div class="thumb"></div>
+    </div>
+
+
+    <div class="flex-container-space-around">
+        <div class="thumb"></div>
+        <div class="thumb"></div>
+        <div class="thumb"></div>
+        <div class="thumb"></div>
+    </div>
+</body>
+
+
+</head>
+</html>
