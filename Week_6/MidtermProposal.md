@@ -1,4 +1,4 @@
-#H1 Midterm Proposal
+Midterm Proposal
 
 Proposal: My proposal is creating a restaurnat/places to eat blog. 
 This blog would consistent of me speaking about the different restaurants
@@ -14,8 +14,7 @@ Things I Need to Learn:
 - Creating drop down tabs for nav bar
 - How to get logo on the nav bar
 - Getting personal pictures on the website and learning how to properly 
- resize them so that they fit and still look like the picture 
-- 
+ resize them so that they fit and still look like the picture
 
 Concepts I learned that I will be using:
 - Forms
