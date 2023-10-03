@@ -7,7 +7,7 @@ I would speak about the food, the drinks, the service, and overall just the expi
 
 [Midterm Proposal Slides](https://docs.google.com/presentation/d/1OtsJRw8EuA9mFL6D1QJXXX6-uWzf4UHS3Ed_l1xhoP0/edit?usp=sharing)
 
-Website Inspiration: [Website Inspiration](https://www.thefoodaholic.co.uk/)
+[Website Inspiration](https://www.thefoodaholic.co.uk/)
 
 Things I Need to Learn:
 - How to create a slideshow of pictures on home screen
