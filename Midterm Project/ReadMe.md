@@ -10,7 +10,7 @@
 
 # Code Snippet
 - The code below represents the html of my navigation bar.
-![Code Snippet](Img/code snippet.png)
+[Code Snippet](MidtermProject/codesnippet.png)
  Here we can see how there are 4 different options but only two of them have dropdown options which are the "blog" button the About Us button
 
  # Next Steps
