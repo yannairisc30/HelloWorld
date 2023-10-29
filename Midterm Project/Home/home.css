@@ -18,7 +18,7 @@ float: left;
 font-size: 20px;
 color: rgb(254, 254, 254);
 text-align: center;
-padding: 14px 16px;
+padding: 16px 18px;
 text-decoration: none;
 }
 
@@ -34,10 +34,6 @@ border: none;
 outline: none;
 color: black;
 padding: 14px 16px;
-/* background-color: inherit;
-/* font-family: 'Schoolbell', arial, serif; */
-/* font-family: 'Shadows Into Light', cursive; */
-/* font-family: 'Indie Flower', cursive; */
 margin: 0;
 }
 
@@ -47,10 +43,6 @@ background-color: rgb(246, 240, 225);
 color: rgb(11, 1, 1);
 }
 
-/* .dropbtn {
-    background-color: #003016;
-    font-family: Arial, Helvetica, sans-serif;
-} */
 
 .dropdown .dropbtn {
     background-color: #003016;
@@ -111,7 +103,7 @@ display: block;
     max-width: 100%;
     min-height: 100vh;
     padding-bottom: 10px;
-    margin-top: 25px;
+    margin-top: 75px;
 }
 
 .thumb {
@@ -130,9 +122,6 @@ display: block;
     text-align: center;
 }
 
-/* Default styles */
-
-/* Add your default styles here */
 
 /* Medium Screen size */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
