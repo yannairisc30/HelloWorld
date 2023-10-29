@@ -9,9 +9,9 @@
 - About Us: Why did I choose to write about food, and a form where people can submit places they want me to try.
 
 # Code Snippet
-- The code below represents the html of my navigation bar.
+The code below represents the html of my navigation bar. Here we can see how there are 4 different options but only two of them have dropdown options which are the "blog" button the About Us button
 ![Code Snippet](codesnippet.png)
- Here we can see how there are 4 different options but only two of them have dropdown options which are the "blog" button the About Us button
+ 
 
  # Next Steps
  - My next steps would be to continue working on my layout for the pages.
