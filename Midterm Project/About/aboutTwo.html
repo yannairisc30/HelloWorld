@@ -8,6 +8,20 @@
     <link rel="stylesheet" type="text/css" href="../About/style.css"/>
 </head>
 
+<!-- This is what I did for HW 9 -->
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded",function(){
+        document.getElementById('Restaurant Form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+    // Display the thank you message
+        document.getElementById('thankYouMsg').classList.toggle('hidden');
+        console.log(event);
+        });
+    })
+    
+</script>
+
 <body>
 
     <div class="navbar">
@@ -37,13 +51,15 @@
         </div>
     </div>
 
-    <form action="">
+    <form id="Restaurant Form">
         <label for="restName">Restaurant Name:</label><br>
         <input type="text" id="restName" name="restName" value=""><br>
         <label for="addi">Location:</label><br>
         <input type="text" id="addi" name="addi" value=""><br><br>
         <input type="submit" value="Submit">
       </form> 
+    
+    <div id="thankYouMsg" class="hidden">Thank you for your submission!</div>
     
 </body>
 

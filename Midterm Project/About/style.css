@@ -157,3 +157,12 @@ input[type="submit"]:hover {
     line-height: 1.6;
     margin-top: 20px;
 }
+
+.hidden{
+    display: none;
+}
+
+#thankYouMsg{
+    color: green;
+    font-size: 20px;
+}
