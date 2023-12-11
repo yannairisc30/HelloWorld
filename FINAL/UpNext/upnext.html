@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BLOG PAGE</title>
+    <link rel="stylesheet" type="text/css" href=".style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet">
+
+    <style>
+        /* Styling needed for height and width for map to show up */
+        #map {
+          width: 100vw;
+          height: 100vh;
+        }
+      </style>
+      <script>
+        ;((g) => {
+          var h,
+            a,
+            k,
+            p = 'The Google Maps JavaScript API',
+            c = 'google',
+            l = 'importLibrary',
+            q = '__ib__',
+            m = document,
+            b = window
+          b = b[c] || (b[c] = {})
+          var d = b.maps || (b.maps = {}),
+            r = new Set(),
+            e = new URLSearchParams(),
+            u = () =>
+              h ||
+              (h = new Promise(async (f, n) => {
+                await (a = m.createElement('script'))
+                e.set('libraries', [...r] + '')
+                for (k in g)
+                  e.set(
+                    k.replace(/[A-Z]/g, (t) => '_' + t[0].toLowerCase()),
+                    g[k]
+                  )
+                e.set('callback', c + '.maps.' + q)
+                a.src = `https://maps.${c}apis.com/maps/api/js?` + e
+                d[q] = f
+                a.onerror = () => (h = n(Error(p + ' could not load.')))
+                a.nonce = m.querySelector('script[nonce]')?.nonce || ''
+                m.head.append(a)
+              }))
+          d[l]
+            ? console.warn(p + ' only loads once. Ignoring:', g)
+            : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)))
+        })({
+          // Your API KEY. DO not publish to github!
+          //  API Keys can be found at Keys and Credentials
+          key: 'YOUR_API_KEY_HERE',
+          v: 'weekly',
+          // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+          // Add other bootstrap parameters as needed, using camel case.
+        })
+      </script>
+      <script>
+        async function initMap() {
+          // Request needed libraries.
+          const {Map} = await google.maps.importLibrary('maps')
+          const {AdvancedMarkerElement} = await google.maps.importLibrary(
+            'marker'
+          )
+          const map = new Map(document.getElementById('map'), {
+            // copy paste lat lon from geolocation example to start
+            center: {lat: 40.9592695, lng: -72.5748339},
+            // mess with zoom factor with them
+            zoom: 14,
+            //  map id from: Map Management
+            // go to map styles to create a new map style and associate it with this map id
+            mapId: '32f409fbf351817b',
+          })
+          // Add a marker
+          const marker = new AdvancedMarkerElement({
+            map,
+            // copy paste lat lon from geolocation example
+            position: {lat: 40.9592695, lng: -72.5748339},
+          })
+        }
+  
+        initMap()
+      </script>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+    crossorigin="anonymous">
+</script>
+<div class="navbar navbar-expand-lg navbar-light navbar-dark" style = "background-color: #003016">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">PRÓXIMA PARADA COMIDA</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="#navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNavDropdown"
+      >
+        <ul class="navbar-nav align-self-end px-4">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../Home/home.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Blog/blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./UpNext/upnext.html">Join Me</a>
+          </li>
+          <!-- Begin dropdown menu item -->
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              class="nav-link dropdown-toggle"
+            >
+              About
+            </a>
+            <!-- dropdown-menu-end fixes the alignment  -->
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="../About/GTKM.html">Get to Know Me</a></li>
+              <li><a class="dropdown-item" href="../About/RestForm.html">Restaurant Request</a></li>
+            </ul>
+          </li>
+          <!-- End dropdown menu item -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+</body>
+</html>
