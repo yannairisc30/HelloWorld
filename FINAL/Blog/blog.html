@@ -4,17 +4,40 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>BLOG PAGE</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
     rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome Lib where the rating stars is generated -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
     body{
         background-color: rgb(248, 237, 222);
     }
+    .blog-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .smaller-img {
+        max-width: 450px; /* Adjust the maximum width as needed */
+        height: auto;
+    }
+    .hidden {
+        display: none;
+    }
+
+    .checked {
+        color: darkgreen;
+    }
+
 </style>
+
 
 
 <body>
@@ -81,71 +104,187 @@
         <option value="all">All Locations</option>
         <option value="manhattan">Manhattan</option>
         <option value="brooklyn">Brooklyn</option>
-        <!-- Add more options as needed -->
+        <option value="bronx">Bronx</option>
+        <option value="queens">Queens</option>
+        <option value="staten island">Staten Island</option>
     </select>
 </div>
 
-<div class="container-post mt-3">
-    <div class="single-Post" data-location="manhattan">
-        <h2>Heading to BCD Tofu House</h2>
-        <h5>March, 16, 2023</h5>
-        <div class="img">
-            <img src="../Home/IMAGES/Webdev Photo 1.png">
-        </div>
-        <p>Location:  5W. 32nd Street, New York, NY 10001 <br> 
-            <p>Website: <a href="https://www.bcdtofuhouse.com/">BCD Tofu House</a></p>
-            <br>
-            <p>Personal Rating Overall:
-                 <div class="pimage"> 
-                    <img src="../Blog/green-stars.png">
-                 </div>
+<div class="container mx-auto mt-4 blog-container">
+    <div class="row">
+        <div class="col-12 mb-4 border border-5 border-white p-3 bg-light" data-location="manhattan">
+            <div class="single-Post" >
+                <h2>Heading to BCD Tofu House</h2>
+                <h5>March, 16, 2023</h5>
+                <div class="img d-flex justify-content-center">
+                    <img src="../Home/IMAGES/Webdev Photo 1.png" class="img-fluid smaller-img mb-2" alt="BCD Tofu House">
+                </div>
+                <p>Location: 5W. 32nd Street, New York, NY 10001</p>
+                <p>Website: <a href="https://www.bcdtofuhouse.com/">BCD Tofu House</a></p>
+                <p>Rating:
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
                 </p>
-        </p> 
-        <p>BCD Tofu House is a Korean restaurant in KTown which is downtown Manhattan. 
-            The food was was phenemol. When you are seated you are first served tons of mini side dishes such as,
-             macaroni and cheese, kimichi, cucumbers, etc... The dish that is seen in the picture is Topokki which consistence of
-            rice cakes, fish cakes, two fried dumplings, and a boiled egg all in a spicy sauce.
-             This dish could be find in the Appetizer section of their menu or I beleive sharables. 
-             There is a variety of option to eat on this menu from.....</p>
-      </div>
-      <div class="single-Post" data-location="manhattan">
-        <h2>Heading to Peachy Keens</h2>
-        <h5>September, 23, 2023</h5>
-        <div class="img">
-            <img src="../Home/IMAGES/webdevimg2.png">
-        </div>
-        <p>Location: 325 W 44th St, New York, NY 10036 <br> 
-            <p>Website: <a href="https://www.peachykeennyc.com/">Peachy Keens</a></p>
-            <br>
-            <p>Personal Rating Overall:
-                 <div class="pimage"> 
-                    <img src="../Blog/green-stars.png">
-                 </div>
+                <p>BCD Tofu House, nestled in the heart of KTown (Korea Town) in downtown Manhattan, stands as a delightful Korean culinary haven. 
+                    The culinary experience it offers is nothing short of phenomenal.
+                    Upon being seated, patrons are treated to a delightful array of mini side dishes, 
+                    including macaroni & cheese, kimchi, cucumbers, and more.
+                     A standout dish featured in the picture is Topokki, a delectable combination of rice cakes, fish cakes, two fried dumplings, 
+                     and a boiled egg bathed in a tantalizingly spicy sauce. 
+                     This flavorful delight finds its place in the Appetizer section of their menu or can be enjoyed as a shareable option.
+                    What sets BCD Tofu House apart is its diverse menu, featuring a range of options, including many that cater 
+                    to vegetarian preferences. A particularly commendable aspect is the attentive service—mini side dishes are 
+                    promptly replenished upon request, adding an extra touch to the dining experience.
                 </p>
-        </p> 
-        <p>Peachy Keens is an American Restaurant! The restaurant is a 80's themed with vibrant colors. 
-            This dish was part of their dinner menu which includes various options. The service and music was great. </p>
-      </div>
+            </div>
+        </div>
+        <div class="col-12 mb-4 border border-5 border-white p-3 bg-light"data-location="manhattan"> 
+            <div class="single-Post">
+                <h2>Heading to Peachy Keens</h2>
+                <h5>September, 23, 2023</h5>
+                <div class="img d-flex justify-content-center">
+                    <img src="../Home/IMAGES/webdevimg2.png" class="img-fluid smaller-img mb-2" alt="Peachy Keens">
+                </div>
+                <p>Location: 325 W 44th St, New York, NY 10036</p>
+                <p>Website: <a href="https://www.peachykeennyc.com/">Peachy Keens</a></p>
+                <p>Rating:
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </p>
+                <p>Peachy Keens, an American restaurant, immerses diners in a lively 80's-themed ambiance adorned with vibrant colors, 
+                    creating a nostalgic and energetic atmosphere.
+                    Featured on their dinner menu is the dish in the picute that includes mac&cheese, BBQ ribs, cornbread, and coleslaw. 
+                    this delightful dish stands out among various tempting options. 
+                    As I enjoyed my second visit to Peachy Keens, 
+                    the experience was elevated by fantastic service and a lively musical backdrop provided by a 
+                    DJ—a delightful surprise! My first visit to this place was at brunch, where I indulged in their scrumptious pancakes.
+                    One of the restaurant's standout features is the impeccable service that caters to your every need, 
+                    enhancing the overall dining experience. 
+                    However, it's worth noting that the menu selection, albeit enticing, 
+                    is somewhat limited—a minor downside to an otherwise enjoyable culinary adventure at Peachy Keens </p>
+            </div>
+        </div>
+        <div class="col-12 mb-4 border border-5 border-white p-3 bg-light" data-location="manhattan"> 
+            <div class="single-Post">
+                <h2>Heading to Soothr</h2>
+                <h5>July, 16, 2023</h5>
+                <div class="img d-flex justify-content-center">
+                    <img src="SOOTHR MEAL.png" class="img-fluid smaller-img mb-2" alt="Soothr">
+                </div>
+                <p>Location:204 E 13th St, New York, NY 10003</p>
+                <p>Website: <a href="https://soothrnyc.com/">Soothr</a></p>
+                <p>Rating:
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </p>
+                <p></p>
+            </div>
+        </div>
+        <div class="col-12 mb-4 border border-5 border-white p-3 bg-light" data-location="brooklyn"> 
+            <div class="single-Post">
+                <h2>Heading to</h2>
+                <h5>September, 23, 2023</h5>
+                <div class="img d-flex justify-content-center">
+                    <img src="Soup Dumpling.png" class="img-fluid smaller-img mb-2" alt="Soup Doupling Place">
+                </div>
+                <p>Location:</p>
+                <p>Website: <a href="#">Soup Doupling Place</a></p>
+                <p>Rating:
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </p>
+                <p></p>
+            </div>
+        </div>
+        <div class="col-12 mb-4 border border-5 border-white p-3 bg-light" data-location="manhattan"> 
+            <div class="single-Post">
+                <h2>Heading to </h2>
+                <h5>September, 4, 2023</h5>
+                <div class="img d-flex justify-content-center">
+                    <img src="Tacos.png" class="img-fluid smaller-img mb-2" alt="Taco Place">
+                </div>
+                <p>Location: </p>
+                <p>Website: <a href="#">Taco Place</a></p>
+                <p>Rating:
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </p>
+                <p></p>
+            </div>
+        </div>
+        <div class="col-12 mb-4 border border-5 border-white p-3 bg-light" data-location="manhattan"> 
+            <div class="single-Post">
+                <h2>Heading to</h2>
+                <h5>Some Date</h5>
+                <div class="img d-flex justify-content-center">
+                    <img src="Dim Sum.png" class="img-fluid smaller-img mb-2" alt="Dim Sum">
+                </div>
+                <p>Location: Some Location</p>
+                <p>Website: <a href="#">Dim Sum</a></p>
+                <p>Rating:
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </p>
+                <p></p>
+            </div>
+        </div>
+    </div>
 </div>
-    
 
 
-    <script>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(){
         function filterPosts() {
-            var selectedLocation = document.getElementById("locationFilter").value;
-            var posts = document.querySelectorAll('.single-Post');
+            var selectedLocation = document.getElementById("locationFilter").value.toLowerCase();
+            var posts = document.querySelectorAll('.col-12');
+            var anyPostVisible = false; // Flag to check if any post is visible
 
             posts.forEach(function (post) {
-                var location = post.querySelector('.location').textContent.toLowerCase();
+                var location = post.getAttribute('data-location').toLowerCase();
+                var container = post;
 
-                if (selectedLocation === 'all' || location.includes(selectedLocation)) {
-                    post.style.display = 'block';
+                if (selectedLocation === 'all' || location === selectedLocation) {
+                    container.style.display = 'block';
+                    anyPostVisible = true; // Set the flag to true if any post is visible
                 } else {
-                    post.style.display = 'none';
+                    container.style.display = 'none';
                 }
             });
+            // Display a message if no posts are visible
+            if (!anyPostVisible) {
+                document.getElementById("noPostsMessage").style.display = 'block';
+            } else {
+                document.getElementById("noPostsMessage").style.display = 'none';
+            }
         }
-    </script>
+        // Initial filter on page load
+        filterPosts();
+        // Attach the filterPosts function to the change event of the location filter
+        document.getElementById("locationFilter").addEventListener("change", filterPosts);
+    });
+</script>
+
+<div id="noPostsMessage" style="display: none; text-align: center; font-weight: bold; margin-top: 20px;">
+    No restaurants in this borough reviewed yet. Please come back!
+</div>
 
 </body>
 </html>

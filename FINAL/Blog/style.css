@@ -11,9 +11,9 @@ body {
 /* .navbar {
     overflow: hidden;
     background-color: #003016;
-} */
+}
 
-/* .navbar a {
+.navbar a {
 float: left;
 font-size: 20px;
 color: rgb(254, 254, 254);
@@ -25,7 +25,7 @@ text-decoration: none;
 /* .dropdown {
 float: left;
 overflow: hidden;
-} */
+}
 
 /* style the lookbook button */
 /* .dropdown .dropbtn {
@@ -33,7 +33,7 @@ font-size: 20px;
 border: none;
 outline: none;
 color: black;
-padding: 14px 16px;
+padding: 14px 16px; */ */
 /* background-color: inherit;
 /* font-family: 'Schoolbell', arial, serif; */
 /* font-family: 'Shadows Into Light', cursive; */
@@ -68,8 +68,8 @@ box-shadow: 0px 8px 16px 0px rgba(224, 217, 217, 0.2);
 z-index: 1;
 } */
 
-/* styles the text in the dropdown
-.dropdown-content a {
+/* styles the text in the dropdown */
+/* .dropdown-content a {
 float: none;
 color: black;
 padding: 10px 16px;
