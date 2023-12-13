@@ -11,8 +11,17 @@
     <style>
         /* Styling needed for height and width for map to show up */
         #map {
-          width: 100vw;
-          height: 100vh;
+            width: 80vw;  /* Set the width to 50% of the viewport width */
+            height: 80vh;
+            margin: 20px auto;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: rgb(248, 237, 222);;
         }
       </style>
       <script>
@@ -53,7 +62,7 @@
         })({
           // Your API KEY. DO not publish to github!
           //  API Keys can be found at Keys and Credentials
-          key: 'YOUR_API_KEY_HERE',
+          key: 'Your API key',
           v: 'weekly',
           // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
           // Add other bootstrap parameters as needed, using camel case.
@@ -68,19 +77,33 @@
           )
           const map = new Map(document.getElementById('map'), {
             // copy paste lat lon from geolocation example to start
-            center: {lat: 40.9592695, lng: -72.5748339},
+            center: {lat: 40.730610, lng: -73.935242},
             // mess with zoom factor with them
             zoom: 14,
             //  map id from: Map Management
             // go to map styles to create a new map style and associate it with this map id
-            mapId: '32f409fbf351817b',
+            mapId: '78c38a592f97405e',
           })
           // Add a marker
-          const marker = new AdvancedMarkerElement({
+          const markerOne = new AdvancedMarkerElement({
             map,
             // copy paste lat lon from geolocation example
-            position: {lat: 40.9592695, lng: -72.5748339},
+            position: {lat: 40.73033789999999,lng: -73.98298489999999},
           })
+
+          const markerTwo = new AdvancedMarkerElement({
+            map,
+            // copy paste lat lon from geolocation example
+            position: {lat: 40.7902074, lng: -73.9733818},
+          })
+
+          const markerThree = new AdvancedMarkerElement({
+            map,
+            // copy paste lat lon from geolocation example
+            position: {lat: 40.7206929,lng: -73.9956057},
+          })
+
+
         }
   
         initMap()
