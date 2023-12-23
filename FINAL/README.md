@@ -29,7 +29,7 @@ Small things that I would change
 # Google Maps Page
 - I wasn't sure how to hide my api key so here's a picuture on how my join me page looks like!
 
-![Google Map](GoogleMap.png)
+![Google Map](GooglMap.png)
 
 
 
