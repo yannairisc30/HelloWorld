@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BLOG PAGE</title>
+    <title>Google Maps</title>
     <link rel="stylesheet" type="text/css" href=".style.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
     rel="stylesheet">
+
 
     <style>
         /* Styling needed for height and width for map to show up */
@@ -22,6 +23,12 @@
 
         body{
             background-color: rgb(248, 237, 222);;
+        }
+
+        h1{
+            text-align: center;
+            color: black;
+            margin-top: 10px;
         }
       </style>
       <script>
@@ -62,7 +69,7 @@
         })({
           // Your API KEY. DO not publish to github!
           //  API Keys can be found at Keys and Credentials
-          key: 'Your API key',
+          key: 'YOUR API KEY GOES HERE',
           v: 'weekly',
           // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
           // Add other bootstrap parameters as needed, using camel case.
@@ -117,7 +124,7 @@
 </script>
 <div class="navbar navbar-expand-lg navbar-light navbar-dark" style = "background-color: #003016">
     <div class="container-fluid">
-      <a href="#" class="navbar-brand">PRÓXIMA PARADA COMIDA</a>
+      <a href="../Home/home.html" class="navbar-brand">PRÓXIMA PARADA COMIDA</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -167,6 +174,8 @@
       </div>
     </div>
   </div>
+
+  <h1>Join Me On My Next Food Adventure</h1>
 
   <div id="map"></div>
 
